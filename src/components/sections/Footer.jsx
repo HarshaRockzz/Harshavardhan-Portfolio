@@ -32,6 +32,24 @@ const Logo = styled.div`
   color: ${({ theme }) => theme.primary};
 `;
 
+const ContactInfo = styled.div`
+  text-align: center;
+`;
+
+const Email = styled.a`
+  display: block;
+  color: ${({ theme }) => theme.text_primary};
+  text-decoration: none;
+  margin-bottom: 5px;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+
+const Phone = styled.div`
+  color: ${({ theme }) => theme.text_primary};
+`;
+
 const Nav = styled.nav`
   width: 100%;
   max-width: 800px;
@@ -66,6 +84,7 @@ const SocialMediaIcons = styled.div`
   display: flex;
   margin-top: 1rem;
 `;
+
 const SocialMediaIcon = styled.a`
   display: inline-block;
   margin: 0 1rem;
@@ -89,6 +108,10 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrapper>
         <Logo>Harshavardhan Mamidipaka</Logo>
+        <ContactInfo>
+          <Email href="mailto:mamidipaka2003@gmail.com">mamidipaka2003@gmail.com</Email>
+          <Phone>+91 8985916995</Phone>
+        </ContactInfo>
         <Nav>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
@@ -110,7 +133,7 @@ const Footer = () => {
             <InstagramIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2024 Harshavardhan  Mamidipaka. All rights reserved.</Copyright>
+        <Copyright>&copy; 2024 Harshavardhan Mamidipaka. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
