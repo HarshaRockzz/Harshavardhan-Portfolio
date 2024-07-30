@@ -10,7 +10,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/HarshaRockzz",
   resume:
-    "https://drive.google.com/file/d/11X1CPqjalmKmL0Re8yi1SWbprdkY2jsu/view?usp=sharing",
+    "https://drive.google.com/file/d/1LG11DrulrNZrfksub2EsAA5O1_mCf41e/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/mamidipaka-harshavardhan/",
   twitter: "https://twitter.com/",
   insta: "https://www.instagram.com/",
@@ -519,8 +519,8 @@ export const projects = [
       "TensorFlow Extended"
     ],
     category: "machine learning",
-    github: "https://github.com/HarshaRockzz/BERT_Classification_with_TFX",
-    webapp: "https://github.com/HarshaRockzz/BERT_Classification_with_TFX"
+    github: "https://github.com/HarshaRockzz/TFX-ML-Production-Pipeline-for-Sentiment-Analysis",
+    webapp: "https://github.com/HarshaRockzz/TFX-ML-Production-Pipeline-for-Sentiment-Analysis"
   },
 
 
@@ -548,6 +548,52 @@ export const projects = [
     category: "machine learning",
     github: "https://github.com/HarshaRockzz/Disaster-Tweets-Classification",
     webapp: "https://github.com/HarshaRockzz/Disaster-Tweets-Classification"
+  },
+  {
+    "id": 22,
+    "title": "Sonar-Based AUV Navigation and Mapping",
+    "date": "Jan 2024 - Nov 2024",
+    "description": "Designed and implemented an autonomous underwater vehicle (AUV) navigation and mapping system using sonar technology. The project involved developing algorithms for sonar data processing, obstacle avoidance, and path planning. The system was tested in a controlled environment to ensure accurate mapping and navigation. The project utilized Robot Operating System (ROS) for integrating various sensors and actuators, and the AUV was equipped with a Doppler Velocity Log (DVL) for precise underwater positioning.",
+    "image": "https://qph.cf2.quoracdn.net/main-qimg-a9af368883bf99d7df135ebf610fe216",
+    "tags": [
+      "C++",
+      "Python",
+      "ROS",
+      "Sonar",
+      "AUV",
+      "Machine Learning",
+      "Underwater Robotics",
+      "Navigation",
+      "Mapping",
+      "DVL",
+      "Computer Vision",
+      "Object Detection",
+      "Obstacle Avoidance",
+      "Path Planning"
+    ],
+    "category": "machine learning",
+    "github": "https://github.com/HarshaRockzz/Sonar-Based-AUV-Navigation-and-Mapping",
+    "webapp": "https://github.com/HarshaRockzz/Sonar-Based-AUV-Navigation-and-Mapping"
+  },
+
+  {
+    id: 6,
+    title: "Internet Firewall Action Classification and Prediction",
+    date: "Mar 2023",
+    description:
+      "Developed a machine learning model to classify and predict Internet firewall actions based on a dataset collected from the UCI Machine Learning Repository. The data was split into a 3:1 ratio for training and testing. The project involved multiclass classification, identifying four distinct actions from the dataset. The model was trained and tested to ensure accurate classification and prediction of firewall actions.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNz5GFm_8A5DYBzNO0vxLqJZNidACL9ITQkQ&s",
+    tags: [
+      "Machine Learning",
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "Multiclass Classification"
+    ],
+    category: "machine learning",
+    github: "https://github.com/HarshaRockzz/Internet-firewall-Action-Classification-and-Prediction",
+    webapp: "https",
   },
   {
     "id": 20,
@@ -588,6 +634,76 @@ export const projects = [
     webapp: "https://brain-tumor.netlify.app/",
   },
   {
+    id: 19,
+    title: "Fine-Tuning Large Language Models",
+    date: "July 2024",
+    description:
+      "Developed a pipeline for fine-tuning large language models (LLMs) on specific domain data to improve performance on specialized tasks. This project involved using advanced natural language processing (NLP) techniques and TensorFlow Extended (TFX) to preprocess data, fine-tune the model, and evaluate its performance. Docker was used to containerize the application for scalable deployment. The pipeline also included model analysis and monitoring using TensorFlow Model Analysis (TFMA) and TensorBoard.",
+    image:
+      "https://blog.monsterapi.ai/blogs/content/images/2023/07/Fine-tunning.png",
+    tags: [
+      "Python",
+      "NLP",
+      "Docker",
+      "Machine Learning",
+      "TensorFlow",
+      "Large Language Models",
+      "Fine-Tuning"
+    ],
+    category: "machine learning",
+    github: "https://github.com/HarshaRockzz/Fine_Tuning_LLM",
+    webapp: "https://github.com/HarshaRockzz/Fine_Tuning_LLM"
+  },
+  {
+    id: 20,
+    title: "News Classification using NLP",
+    date: "March 2024",
+    description:
+      "Developed a natural language processing (NLP) pipeline for classifying news articles into predefined categories. This project involved using text processing techniques and machine learning algorithms to analyze news data and classify it accurately. The pipeline was implemented using TensorFlow Extended (TFX) and included steps for data preprocessing, model training, evaluation, and serving. Docker was utilized to containerize the application for seamless deployment.",
+    image:
+      "data:image/png;base64,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",
+    tags: [
+      "Python",
+      "NLP",
+      "Docker",
+      "Machine Learning",
+      "TensorFlow",
+      "News Classification"
+    ],
+    category: "machine learning",
+    github: "https://github.com/HarshaRockzz/News-Classification-NLP",
+    webapp: "https://github.com/HarshaRockzz/News-Classification-NLP"
+  },
+  {
+    id: 21,
+    title: "Image Classification Deployment",
+    date: "May 2024",
+    description:
+      "Developed a robust machine learning pipeline for image classification and deployed the model for real-time inference. This project involved using convolutional neural networks (CNNs) to classify images into different categories. The pipeline was implemented using TensorFlow Extended (TFX) and included steps for data preprocessing, model training, evaluation, and serving. Docker was used to containerize the application, ensuring easy and scalable deployment.",
+    image:
+      "data:image/png;base64,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",
+    tags: [
+      "Python",
+      "Computer Vision",
+      "Docker",
+      "Machine Learning",
+      "TensorFlow",
+      "Machine Learning Pipelines",
+      "TensorFlow Serving",
+      "TFX",
+      "TFMA",
+      "TFX Pipelines",
+      "Image Classification",
+      "CNN"
+    ],
+    category: "machine learning",
+    github: "https://github.com/HarshaRockzz/Image-Classification-Deployment",
+    webapp: "https://github.com/HarshaRockzz/Image-Classification-Deployment"
+  },
+
+
+
+  {
     id: 8,
     title: "Face Recognition",
     date: "Feb 2024",
@@ -599,25 +715,6 @@ export const projects = [
     category: "machine learning",
     github: "https://github.com/HarshaRockzz/Face-Recognition-AI-with-Python",
     webapp: "https://github.com/HarshaRockzz/Face-Recognition-AI-with-Python",
-  },
-  {
-    id: 6,
-    title: "Internet Firewall Action Classification and Prediction",
-    date: "Mar 2023",
-    description:
-      "Developed a machine learning model to classify and predict Internet firewall actions based on a dataset collected from the UCI Machine Learning Repository. The data was split into a 3:1 ratio for training and testing. The project involved multiclass classification, identifying four distinct actions from the dataset. The model was trained and tested to ensure accurate classification and prediction of firewall actions.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNz5GFm_8A5DYBzNO0vxLqJZNidACL9ITQkQ&s",
-    tags: [
-      "Machine Learning",
-      "Python",
-      "Pandas",
-      "Scikit-learn",
-      "Multiclass Classification"
-    ],
-    category: "machine learning",
-    github: "https://github.com/HarshaRockzz/Internet-firewall-Action-Classification-and-Prediction",
-    webapp: "https",
   },
 ];
 
