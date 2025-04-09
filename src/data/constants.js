@@ -3,13 +3,14 @@ export const Bio = {
   roles: [
     "Full Stack Developer",
     "AI/ML Developer",
+    "GenAI Developer",
     "Programmer",
   ],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/HarshaRockzz",
   resume:
-    "https://drive.google.com/file/d/1R9CVJPmbIfbiGaZN8R4stSLdBhnjr_20/view?usp=sharing",
+    "https://drive.google.com/file/d/11oeiDkB6uhxausuA2Yv4yQePsjeG4HZp/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/mamidipaka-harshavardhan/",
   twitter: "https://twitter.com/",
   insta: "https://www.instagram.com/",
