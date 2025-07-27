@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import EarthCanvas from "../canvas/Earth";
@@ -125,27 +125,177 @@ const ContactButton = styled.input`
   font-weight: 600;
 `;
 
+const SuccessModal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
+
+const ModalContent = styled.div`
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.4s ease-out;
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+`;
+
+const SuccessIcon = styled.div`
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 40px;
+  animation: bounce 0.6s ease-in-out;
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+`;
+
+const ModalTitle = styled.h2`
+  color: white;
+  margin: 0 0 15px 0;
+  font-size: 28px;
+  font-weight: 600;
+`;
+
+const ModalMessage = styled.p`
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 30px 0;
+  font-size: 16px;
+  line-height: 1.5;
+`;
+
+const CloseButton = styled.button`
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+`;
+
 const Contact = () => {
   const form = useRef();
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  useEffect(() => {
+    emailjs.init("exTQaEnRII6Tw2Xd0");
+    console.log("EmailJS initialized");
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    console.log("Form submitted");
+    console.log("Form data:", form.current);
+    
+    // Add current time to form data in IST
+    const currentTime = new Date().toLocaleString('en-IN', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      timeZone: 'Asia/Kolkata',
+      timeZoneName: 'short'
+    });
+    
+    // Create a hidden input for time
+    const timeInput = document.createElement('input');
+    timeInput.type = 'hidden';
+    timeInput.name = 'time';
+    timeInput.value = currentTime;
+    form.current.appendChild(timeInput);
+    
+    // Show loading state
+    const submitButton = e.target.querySelector('input[type="submit"]');
+    const originalValue = submitButton.value;
+    submitButton.value = "Sending...";
+    submitButton.disabled = true;
+
     emailjs
       .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
+        "service_en6ojyj",
+        "template_734etgo",
         form.current,
-        "SybVGsYS52j2TfLbi"
+        "exTQaEnRII6Tw2Xd0"
       )
       .then(
         (result) => {
-          alert("Message Sent");
-          form.current.resut();
+          console.log("SUCCESS:", result);
+          setShowSuccessModal(true);
+          form.current.reset();
         },
         (error) => {
-          alert(error);
+          console.log("FAILED:", error);
+          alert("Failed to send message. Please try again.");
         }
-      );
+      )
+      .finally(() => {
+        // Reset button state
+        submitButton.value = originalValue;
+        submitButton.disabled = false;
+        
+        // Remove the hidden time input
+        const timeInput = form.current.querySelector('input[name="time"]');
+        if (timeInput) {
+          timeInput.remove();
+        }
+      });
   };
 
   return (
@@ -156,15 +306,50 @@ const Contact = () => {
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm onSubmit={handleSubmit}>
+        <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
+          <ContactInput 
+            placeholder="Your Email" 
+            name="email" 
+            type="email"
+            required 
+          />
+          <ContactInput 
+            placeholder="Your Name" 
+            name="name" 
+            type="text"
+            required 
+          />
+          <ContactInput 
+            placeholder="Subject" 
+            name="title" 
+            type="text"
+            required 
+          />
+          <ContactInputMessage 
+            placeholder="Message" 
+            name="message" 
+            rows={4}
+            required 
+          />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
       </Wrapper>
+
+      {showSuccessModal && (
+        <SuccessModal onClick={() => setShowSuccessModal(false)}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <SuccessIcon>✅</SuccessIcon>
+            <ModalTitle>Message Sent!</ModalTitle>
+            <ModalMessage>
+              Thank you for reaching out! I'll get back to you as soon as possible.
+            </ModalMessage>
+            <CloseButton onClick={() => setShowSuccessModal(false)}>
+              Awesome! 🎉
+            </CloseButton>
+          </ModalContent>
+        </SuccessModal>
+      )}
     </Container>
   );
 };
