@@ -136,10 +136,10 @@ const ResumeButton = styled.a`
   appearance: button;
   text-decoration: none;
 
-  width: 95%;
-  max-width: 300px;
+  width: auto;
+  min-width: 200px;
   text-align: center;
-  padding: 16px 0;
+  padding: 16px 24px;
 
   background: hsla(271, 100%, 50%, 1);
   background: linear-gradient(
@@ -249,9 +249,14 @@ const Hero = () => {
                 <SubTitle>{Bio.description}</SubTitle>
               </motion.div>
 
-              <ResumeButton href={Bio.resume} target="_blank">
-                Check Resume
-              </ResumeButton>
+              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+                <ResumeButton href={Bio.resume} target="_blank">
+                  Check Resume
+                </ResumeButton>
+                <ResumeButton href={Bio.medium} target="_blank">
+                  Read My Articles
+                </ResumeButton>
+              </div>
             </HeroLeftContainer>
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
