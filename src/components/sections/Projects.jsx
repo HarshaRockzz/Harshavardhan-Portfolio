@@ -126,7 +126,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             active={toggle === "machine learning"}
             onClick={() => setToggle("machine learning")}
           >
-            MACHINE LEARNING
+            AI/ML
           </ToggleButton>
         </ToggleButtonGroup>
         <CardContainer>
