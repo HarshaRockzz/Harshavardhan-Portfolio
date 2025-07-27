@@ -15,6 +15,7 @@ export const Bio = {
   twitter: "https://twitter.com/",
   insta: "https://www.instagram.com/",
   facebook: "https://www.facebook.com/",
+  medium: "https://medium.com/@mamidipaka2003",
 };
 
 export const skills = [
