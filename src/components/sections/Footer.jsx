@@ -6,6 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ArticleIcon from "@mui/icons-material/Article";
+import VisitCounter from "../VisitCounter";
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -100,7 +101,7 @@ const SocialMediaIcon = styled.a`
 const Copyright = styled.p`
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: ${({ theme }) => theme.soft2};
+  color: ${({ theme }) => theme.text_secondary};
   text-align: center;
 `;
 
@@ -137,7 +138,8 @@ const Footer = () => {
             <ArticleIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2024 Harshavardhan Mamidipaka. All rights reserved.</Copyright>
+        <VisitCounter />
+        <Copyright>&copy; 2025 Harshavardhan Mamidipaka. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
