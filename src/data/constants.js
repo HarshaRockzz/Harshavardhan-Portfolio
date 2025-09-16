@@ -13,8 +13,8 @@ export const Bio = {
     "https://drive.google.com/file/d/1_r8fSQ81v9JUqc7nVJ3FGlAHYJqkAq1E/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/mamidipaka-harshavardhan/",
   twitter: "https://twitter.com/",
-  insta: "https://www.instagram.com/",
-  facebook: "https://www.facebook.com/",
+  insta: "https://www.instagram.com/harshavardhan_2411/",
+  facebook: "https://www.instagram.com/harshavardhan_2411/",
   medium: "https://medium.com/@mamidipaka2003",
 };
 
@@ -753,5 +753,6 @@ export const projects = [
     webapp: "https://github.com/HarshaRockzz/Face-Recognition-AI-with-Python",
   },
 ];
+
 
 
