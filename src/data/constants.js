@@ -241,7 +241,7 @@ export const experiences = [
     role: "Software Development Engineer - I",
     company: "POP UPI (Razorpay - Backed)",
     date: "April 2025 - Present",
-    desc: "Designed high-uptime Go microservices for credit card flows (99.9% uptime, <200ms latency), built secure APIs for card ops, and implemented Redis caching to cut DB load by 45%. Developed event-driven systems with GoCron + RabbitMQ, reducing alert misses by 70%. Also contributed to AI/ML infra for real-time fraud detection and predictive observability at scale.",
+    desc: "Designed and scaled Go-based microservices for credit card onboarding and operations with 99.9% uptime and sub-200 ms latency, integrating Gorilla Mux + GORM APIs, Redis caching (45% DB load reduction), and atomic workflows to boost reliability. Built event-driven systems with GoCron + RabbitMQ (70% fewer missed alerts), optimized onboarding latency (30 s → 8 s) and processing times (51 s → 14 s), and enhanced observability via Prometheus + Grafana, reducing on-call workload by 3 hours/week.",
     skills: [
       "GO",
       "Microservices",
@@ -261,7 +261,7 @@ export const experiences = [
     role: "Quantitative Research Intern",
     company: "DRW",
     date: "Jan 2025 - April 2025",
-    desc: "Ran live trading simulations with performance tracking (Sharpe Ratio, PnL), optimized execution latency via infra tuning, and gained hands-on experience in HFT, infra automation, and predictive analytics in a production-grade setup.",
+    desc: "Optimized high-frequency trading (HFT) systems by reducing order execution latency by 18% (2.3 ms → 1.9 ms) through co-located infra and network tuning; architected automated data ingestion + monitoring pipelines improving reliability by 30%, and integrated low-latency ML services for real-time anomaly detection and risk monitoring in production.",
     skills: [
       "Python",
       "Machine Learning Algorithms",
@@ -753,6 +753,7 @@ export const projects = [
     webapp: "https://github.com/HarshaRockzz/Face-Recognition-AI-with-Python",
   },
 ];
+
 
 
 
