@@ -10,7 +10,7 @@ export const Bio = {
     "I’m a driven and adaptable engineer with a passion for learning and solving real-world problems. I thrive in fast-paced environments and am committed to delivering high-impact, quality solutions.",
   github: "https://github.com/HarshaRockzz",
   resume:
-    "https://drive.google.com/file/d/1XBuXjanswKxGe8cPDFXOnuxK5Hk0ft9Y/view?usp=drive_link",
+    "https://drive.google.com/file/d/1faL8Z-qG2fBX1NI-fB4W8d-AHAOw0eYZ/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/mamidipaka-harshavardhan/",
   twitter: "https://twitter.com/",
   insta: "https://www.instagram.com/harshavardhan_2411/",
@@ -753,6 +753,7 @@ export const projects = [
     webapp: "https://github.com/HarshaRockzz/Face-Recognition-AI-with-Python",
   },
 ];
+
 
 
 
