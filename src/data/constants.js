@@ -315,7 +315,11 @@ export const experiences = [
     role: "Research Intern",
     company: "IIT MADRAS",
     date: "May 2023 - July 2023",
-    desc: "Designed a Python-based simulator to replicate a 2D environment with various material properties for robotic path planning and navigation.",
+    desc: [
+    "Developed a Python-based simulation framework to model 2D environments with variable material and surface properties for autonomous robotic navigation and path planning research.",
+    "Implemented algorithms for obstacle avoidance, trajectory optimization, and motion control, improving simulation accuracy and robustness across dynamic scenarios.",
+    "Collaborated with research scholars to validate simulation results against analytical models, contributing to reproducible experiments and research documentation."
+  ],
     skills: [
       "Python",
       "Simulation and Modeling",
@@ -327,13 +331,25 @@ export const experiences = [
     ],
   },
   {
-    id: 4,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
-    role: "Open Source Contributor ",
-    company: "GirlScript Summer of Code",
-    date: "May 2023 - August 2023",
-    desc: "Contributed to different open-source projects and learn from industry experts",
-  },
+  id: 4,
+  img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
+  role: "Open Source Contributor",
+  company: "GirlScript Summer of Code",
+  date: "May 2023 - August 2023",
+  desc: [
+    "Contributed to multiple open-source projects under GirlScript Summer of Code, collaborating with global developers and mentors across diverse tech stacks.",
+    "Implemented feature enhancements and resolved production-level bugs across web and API repositories, improving overall codebase stability and usability.",
+  ],
+  skills: [
+    "Git",
+    "GitHub",
+    "Open Source",
+    "React.js",
+    "Node.js",
+    "REST APIs",
+    "Documentation"
+  ]
+},
 ];
 
 export const education = [
@@ -689,6 +705,7 @@ export const projects = [
     webapp: "https://github.com/HarshaRockzz/News-Classification-NLP"
   },
 ];
+
 
 
 
