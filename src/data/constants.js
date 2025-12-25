@@ -10,7 +10,7 @@ export const Bio = {
     "I’m a driven and adaptable engineer with a passion for learning and solving real-world problems. I thrive in fast-paced environments and am committed to delivering high-impact, quality solutions.",
   github: "https://github.com/HarshaRockzz",
   resume:
-    "https://drive.google.com/file/d/1zCv1fiePFXte0rT3tdlT6hLXX7x97fnm/view?usp=sharing",
+    "https://drive.google.com/file/d/1qENJ1R8qQQJMFkh742f5sVS94anNFyy5/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/mamidipaka-harshavardhan/",
   twitter: "https://twitter.com/",
   insta: "https://www.instagram.com/harshavardhan_2411/",
